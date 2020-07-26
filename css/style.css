@@ -1,0 +1,406 @@
+@charset "UTF-8";
+*,
+*:before,
+*:after {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-family: "Kurale", serif; }
+
+button {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  height: 120px;
+  width: 350px;
+  padding: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-radius: 10px;
+  top: 0;
+  -webkit-transition: 0.15s ease-in-out;
+  -moz-transition: 0.15s ease-in-out;
+  -ms-transition: 0.15s ease-in-out;
+  -o-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out; }
+  button:hover {
+    cursor: pointer; }
+  button.play {
+    -webkit-transform: perspective(500px) rotateX(35deg); }
+    button.play:before {
+      content: 'Послушать';
+      font-family: "Kurale", serif;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+      background: #9b9b9b;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9b9b9b), color-stop(100%, #919191));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #9b9b9b 0%, #919191 100%);
+      /* IE6-9 */
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.3); }
+    button.play:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 4px;
+      height: 30px;
+      width: 342px;
+      background: #505050;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #505050), color-stop(100%, #5f5e5e));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #505050 0%, #5f5e5e 100%);
+      /* IE6-9 */
+      border-radius: 0 0 10px 10px;
+      -webkit-transform: perspective(500px) rotateX(-40deg);
+      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.5), 0 3px 2px -1px black;
+      -webkit-transition: 0.15s ease-in-out;
+      -moz-transition: 0.15s ease-in-out;
+      -ms-transition: 0.15s ease-in-out;
+      -o-transition: 0.15s ease-in-out;
+      transition: 0.15s ease-in-out; }
+    button.play:hover {
+      top: -6px; }
+      button.play:hover:after {
+        height: 37px;
+        bottom: -26px; }
+    button.play:active {
+      top: 0px; }
+      button.play:active:after {
+        height: 30px;
+        bottom: -20px; }
+  button.pause {
+    -webkit-transform: perspective(500px) rotateX(35deg); }
+    button.pause:before {
+      content: 'Остановить';
+      font-family: "Kurale", serif;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+      background: #9b9b9b;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9b9b9b), color-stop(100%, #919191));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #9b9b9b 0%, #919191 100%);
+      /* IE6-9 */
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.3); }
+    button.pause:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 4px;
+      height: 30px;
+      width: 342px;
+      background: #505050;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #505050), color-stop(100%, #5f5e5e));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #505050 0%, #5f5e5e 100%);
+      /* IE6-9 */
+      border-radius: 0 0 10px 10px;
+      -webkit-transform: perspective(500px) rotateX(-40deg);
+      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.5), 0 3px 2px -1px black;
+      -webkit-transition: 0.15s ease-in-out;
+      -moz-transition: 0.15s ease-in-out;
+      -ms-transition: 0.15s ease-in-out;
+      -o-transition: 0.15s ease-in-out;
+      transition: 0.15s ease-in-out; }
+    button.pause:hover {
+      top: -6px; }
+      button.pause:hover:after {
+        height: 37px;
+        bottom: -26px; }
+    button.pause:active {
+      top: 0px; }
+      button.pause:active:after {
+        height: 30px;
+        bottom: -20px; }
+  button.again {
+    -webkit-transform: perspective(500px) rotateX(35deg); }
+    button.again:before {
+      content: 'Ещё раз';
+      font-family: "Kurale", serif;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+      background: #9b9b9b;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9b9b9b), color-stop(100%, #919191));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #9b9b9b 0%, #919191 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #9b9b9b 0%, #919191 100%);
+      /* IE6-9 */
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.3); }
+    button.again:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 4px;
+      height: 30px;
+      width: 342px;
+      background: #505050;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #505050), color-stop(100%, #5f5e5e));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #505050 0%, #5f5e5e 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #505050 0%, #5f5e5e 100%);
+      /* IE6-9 */
+      border-radius: 0 0 10px 10px;
+      -webkit-transform: perspective(500px) rotateX(-40deg);
+      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.5), 0 3px 2px -1px black;
+      -webkit-transition: 0.15s ease-in-out;
+      -moz-transition: 0.15s ease-in-out;
+      -ms-transition: 0.15s ease-in-out;
+      -o-transition: 0.15s ease-in-out;
+      transition: 0.15s ease-in-out; }
+    button.again:hover {
+      top: -6px; }
+      button.again:hover:after {
+        height: 37px;
+        bottom: -26px; }
+    button.again:active {
+      top: 0px; }
+      button.again:active:after {
+        height: 30px;
+        bottom: -20px; }
+
+.first-page {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/answer_bg.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.fp-text__title {
+  margin: 50px 0 200px -30px;
+  padding: 0 0 0 0;
+  width: 650px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 26px;
+  line-height: 34px;
+  color: #000;
+  font-weight: 400;
+  border: 1px solid blue; }
+
+.txt-margin {
+  margin: 0 0 180px 0; }
+
+.btn-margin {
+  border: 1px solid red;
+  margin: 0 0 40px 0; }
+
+.clouds-play {
+  margin: 100px 600px 0 0;
+  background-image: url(../img/balloon-orange.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+  height: 230px;
+  position: relative;
+  border: 1px solid orange; }
+  .clouds-play::before {
+    position: absolute;
+    content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
+    font-family: "IBM Plex Mono", monospace;
+    color: #fff;
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 500;
+    top: 65px;
+    right: 300px;
+    width: 100px; }
+
+.clouds-pause {
+  margin: 0 600px 0 0;
+  padding: 0 0 0 0;
+  background-image: url(../img/balloon-green.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+  height: 230px;
+  position: relative; }
+  .clouds-pause::before {
+    position: absolute;
+    content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
+    font-family: "IBM Plex Mono", monospace;
+    color: #fff;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 500;
+    top: 65px;
+    right: 330px;
+    width: 100px; }
+
+.clouds-info {
+  margin: 0 600px 0 0;
+  padding: 0 0 0 0;
+  background-image: url(../img/balloon-blue.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+  height: 230px;
+  position: relative; }
+  .clouds-info::before {
+    position: absolute;
+    content: '\2014\00A0Листай ниже. Там\00A0подробности.';
+    font-family: "IBM Plex Mono", monospace;
+    color: #fff;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+    top: 65px;
+    right: 170px;
+    width: 250px; }
+
+.clouds-site {
+  margin: 0 600px 0 0;
+  padding: 0 0 30px 800px;
+  background-image: url(../img/balloon-red.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400; }
+
+.link {
+  color: #fff;
+  cursor: pointer; }
+  .link:hover {
+    text-decoration: none;
+    color: #000; }
+
+.container {
+  padding: 80px 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.author-text {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 650px;
+  height: 400px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000; }
+
+.video {
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  width: 650px;
+  height: 366px; }
+
+.sign {
+  margin: 10px 0;
+  height: 100px;
+  padding: 0 0 0 0;
+  font-family: "IBM Plex Mono", monospace;
+  color: #000;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-end; }
+  .sign__link {
+    cursor: pointer; }
+    .sign__link:hover {
+      text-decoration: none;
+      color: #505050; }
