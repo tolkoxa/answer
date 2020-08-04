@@ -35,7 +35,7 @@ window.onload = function() {
                 document.getElementById('clouds').classList.remove('clouds-pause');
 
                 btn.innerHTML = '';
-                str = `<button class="button pause" name="btn" data-type="pause"></button>`;
+                str = `<button class="button btn-main pause" name="btn" data-type="pause"></button>`;
                 btn.insertAdjacentHTML('afterbegin', str);
                 sound.play();
                 cloudStart = false;
@@ -46,7 +46,7 @@ window.onload = function() {
                     cloudStop = false;
                 }
                 btn.innerHTML = '';
-                str = `<button class="button play" name="btn" data-type="play"></button>`;
+                str = `<button class="button btn-main play" name="btn" data-type="play"></button>`;
                 btn.insertAdjacentHTML('afterbegin', str);
                 sound.pause();
             }
@@ -59,7 +59,7 @@ window.onload = function() {
         let finalStr = `<p>Сделал </p>
         <p><a class="link" href="http://tolkoxa.ru">tolkoxa.ru</a></p>`;
         btn.innerHTML = '';
-        str = `<button class="button again" name="btn" data-type="again"></button>`;
+        str = `<button class="button btn-main again" name="btn" data-type="again"></button>`;
         btn.insertAdjacentHTML('afterbegin', str);
         document.getElementById('clouds').classList.add('clouds-site');
         document.getElementById('clouds').innerHTML = finalStr;
