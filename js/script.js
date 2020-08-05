@@ -3,6 +3,8 @@ window.onload = function() {
     let checkMp3 = sound.canPlayType('audio/mp3');
 
     let btn = document.getElementById('btn');
+    let fpTop = document.getElementById('fp-top');
+    let clouds = document.getElementById('clouds');
 
     let cloudStart = true;
     let cloudStop = true;
@@ -20,6 +22,8 @@ window.onload = function() {
 
         if (e.name === 'btn') {
             let btnType = e.dataset.type;
+            fpTop.classList.add('._innactive');
+            clouds.classList.remove('._innactive');
 
             if (btnType === 'play' || btnType === 'again') {
 
@@ -32,10 +36,10 @@ window.onload = function() {
 
 
                 if (cloudStart) { setTimeout(cloudPlay, 2000); }
-                document.getElementById('clouds').classList.remove('clouds-pause');
+                clouds.classList.remove('clouds-pause');
 
                 btn.innerHTML = '';
-                str = `<button class="button btn-main pause" name="btn" data-type="pause"></button>`;
+                str = `<button class="button pause" name="btn" data-type="pause"></button>`;
                 btn.insertAdjacentHTML('afterbegin', str);
                 sound.play();
                 cloudStart = false;
@@ -46,7 +50,7 @@ window.onload = function() {
                     cloudStop = false;
                 }
                 btn.innerHTML = '';
-                str = `<button class="button btn-main play" name="btn" data-type="play"></button>`;
+                str = `<button class="button play" name="btn" data-type="play"></button>`;
                 btn.insertAdjacentHTML('afterbegin', str);
                 sound.pause();
             }
@@ -61,23 +65,23 @@ window.onload = function() {
         btn.innerHTML = '';
         str = `<button class="button btn-main again" name="btn" data-type="again"></button>`;
         btn.insertAdjacentHTML('afterbegin', str);
-        document.getElementById('clouds').classList.add('clouds-site');
-        document.getElementById('clouds').innerHTML = finalStr;
+        clouds.classList.add('clouds-site');
+        clouds.innerHTML = finalStr;
     };
 };
 
 function cloudPlay() {
-    document.getElementById('clouds').classList.add('clouds-play');
-    setTimeout(() => { document.getElementById('clouds').classList.remove('clouds-play'); }, 5000);
+    clouds.classList.add('clouds-play');
+    setTimeout(() => { clouds.classList.remove('clouds-play'); }, 5000);
 }
 
 function cloudPause() {
-    document.getElementById('clouds').classList.add('clouds-pause');
+    clouds.classList.add('clouds-pause');
     cloudStop = false;
 }
 
 function cloudMore() {
-    document.getElementById('clouds').classList.add('clouds-info');
+    clouds.classList.add('clouds-info');
     cloudInfo = false;
-    setTimeout(() => { document.getElementById('clouds').classList.remove('clouds-info'); }, 7000);
+    setTimeout(() => { clouds.classList.remove('clouds-info'); }, 7000);
 }

@@ -7,6 +7,7 @@
   box-sizing: border-box; }
 
 body {
+  font-size: 16px;
   font-family: "IBM Plex Mono", monospace;
   font-family: "Kurale", serif;
   position: relative; }
@@ -14,175 +15,111 @@ body {
     content: '18+';
     position: absolute;
     font-family: "IBM Plex Mono", monospace;
-    top: 20px;
+    top: 10px;
     right: 20px;
     width: 20px;
     height: 20px;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: 400;
-    color: #9b9b9b;
-    opacity: 0.7; }
-
-button {
-  position: relative;
-  background: transparent;
-  border: none;
-  outline: none;
-  display: block;
-  height: 120px;
-  width: 350px;
-  padding: 40px;
-  font-size: 40px;
-  line-height: 40px;
-  font-weight: 100;
-  text-transform: uppercase;
-  margin: 0 auto;
-  border-radius: 10px;
-  top: 0;
-  -webkit-transition: 0.15s ease-in-out;
-  -moz-transition: 0.15s ease-in-out;
-  -ms-transition: 0.15s ease-in-out;
-  -o-transition: 0.15s ease-in-out;
-  transition: 0.15s ease-in-out; }
-  button:hover {
-    cursor: pointer; }
-  button.btn-main {
-    -webkit-transform: perspective(500px) rotateX(35deg); }
-    button.btn-main:before {
-      font-family: "Kurale", serif;
-      display: block;
-      position: absolute;
-      z-index: 1;
-      color: #fff;
-      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-      background: #9b9b9b;
-      /* Old browsers */
-      background: -moz-linear-gradient(top, #9b9b9b 0%, #919191 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9b9b9b), color-stop(100%, #919191));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #9b9b9b 0%, #919191 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #9b9b9b 0%, #919191 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #9b9b9b 0%, #919191 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, #9b9b9b 0%, #919191 100%);
-      /* IE6-9 */
-      top: 0;
-      left: 0;
-      border-radius: 10px;
-      width: 100%;
-      height: 100%;
-      padding: 40px;
-      box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.3); }
-    button.btn-main:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -20px;
-      left: 4px;
-      height: 30px;
-      width: 342px;
-      background: #505050;
-      /* Old browsers */
-      background: -moz-linear-gradient(top, #505050 0%, #5f5e5e 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #505050), color-stop(100%, #5f5e5e));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #505050 0%, #5f5e5e 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #505050 0%, #5f5e5e 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #505050 0%, #5f5e5e 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, #505050 0%, #5f5e5e 100%);
-      /* IE6-9 */
-      border-radius: 0 0 10px 10px;
-      -webkit-transform: perspective(500px) rotateX(-40deg);
-      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.5), 0 3px 2px -1px black;
-      -webkit-transition: 0.15s ease-in-out;
-      -moz-transition: 0.15s ease-in-out;
-      -ms-transition: 0.15s ease-in-out;
-      -o-transition: 0.15s ease-in-out;
-      transition: 0.15s ease-in-out; }
-    button.btn-main:hover {
-      top: -6px; }
-      button.btn-main:hover:after {
-        height: 37px;
-        bottom: -26px; }
-    button.btn-main:active {
-      top: 0px; }
-      button.btn-main:active:after {
-        height: 30px;
-        bottom: -20px; }
-  button.play:before {
-    content: 'Послушать'; }
-  button.pause:before {
-    content: 'Остановить'; }
-  button.again:before {
-    content: 'Ещё раз'; }
+    color: #9b9b9b; }
 
 .first-page {
   margin: 0 0 0 0;
-  padding: 130px 0 0 0;
+  padding: 50px 0 0 0;
   width: 100%;
   height: 100vh;
-  background-image: url(../img/answer_bg.jpg);
+  background-image: url(../img/answer_bg_mobile.jpg);
   background-size: cover;
   background-position: bottom right;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center; }
 
-.fp-text__title {
-  margin: 0 0 150px 0;
-  padding: 0 0 0 0;
-  width: 650px;
+.first-text {
+  margin: 0 auto;
+  width: 90%;
+  background-color: #fff;
+  padding: 10px;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 26px;
-  line-height: 34px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   color: #000;
-  font-weight: 400; }
+  font-weight: 400;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px 5px rgba(180, 201, 214, 0.9); }
 
-.txt-margin {
-  margin: 0 0 180px 0; }
+.fpage-bottom {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 0 25px 0; }
 
-.btn-margin {
-  margin: 0 0 40px 0; }
+.button {
+  width: 100px;
+  height: 100px;
+  padding: 0 0 0 7px;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #CC4331;
+  border-radius: 50%;
+  text-shadow: 0 -1px -1px #af3a2a;
+  box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px #919191;
+  transition: all .15s ease-in-out;
+  border: 0px;
+  outline: none; }
+  .button:hover {
+    cursor: pointer;
+    background-color: #d25544;
+    text-shadow: 0 -1px -1px #c4402f;
+    box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px #CC4331; }
+  .button:active {
+    outline: none;
+    margin-bottom: -4px;
+    box-shadow: none; }
+  .button.pause:before {
+    content: '\2502\2502';
+    font-weight: 500; }
+  .button.play:before {
+    content: '\25B6';
+    font-size: 2.5rem; }
+  .button.again:before {
+    content: '\21BB';
+    font-size: 3.5rem;
+    font-weight: 600; }
 
-.cloud {
-  width: 100%;
-  height: 230px; }
+._innactive {
+  display: none; }
+
+.clouds-main {
+  margin: -40px 0 0 -115px; }
 
 .clouds-play {
-  margin: 0 600px 0 0;
-  background-image: url(../img/balloon-orange.png);
+  width: 265px;
+  height: 277px;
+  transform: rotate(-15deg);
+  background-image: url(../img/balloon-orange-mobile.png);
   background-repeat: no-repeat;
   background-position: top right;
-  width: 100%;
-  height: 230px;
-  position: relative; }
+  position: relative;
+  background-size: 80%; }
   .clouds-play::before {
     position: absolute;
     content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
     font-family: "IBM Plex Mono", monospace;
     color: #fff;
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     top: 65px;
-    right: 300px;
-    width: 100px; }
+    right: 70px;
+    width: 100px;
+    transform: rotate(15deg); }
 
 .clouds-pause {
-  margin: 0 600px 0 0;
-  padding: 0 0 0 0;
-  background-image: url(../img/balloon-green.png);
+  background-image: url(../img/balloon-green-mobile.png);
   background-repeat: no-repeat;
   background-position: top right;
-  width: 100%;
-  height: 230px;
   position: relative; }
   .clouds-pause::before {
     position: absolute;
@@ -197,13 +134,9 @@ button {
     width: 100px; }
 
 .clouds-info {
-  margin: 0 600px 0 0;
-  padding: 0 0 0 0;
-  background-image: url(../img/balloon-blue.png);
+  background-image: url(../img/balloon-blue-mobile.png);
   background-repeat: no-repeat;
   background-position: top right;
-  width: 100%;
-  height: 230px;
   position: relative; }
   .clouds-info::before {
     position: absolute;
@@ -218,13 +151,9 @@ button {
     width: 250px; }
 
 .clouds-site {
-  margin: 0 600px 0 0;
-  padding: 0 0 30px 800px;
-  background-image: url(../img/balloon-red.png);
+  background-image: url(../img/balloon-red-mobile.png);
   background-repeat: no-repeat;
   background-position: top right;
-  width: 100%;
-  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,44 +169,3 @@ button {
   .link:hover {
     text-decoration: none;
     color: #000; }
-
-.container {
-  padding: 80px 0 0 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-
-.author-text {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  width: 650px;
-  height: 400px;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 35px;
-  color: #000; }
-
-.video {
-  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.6);
-  border-radius: 25px;
-  width: 650px;
-  height: 366px; }
-
-.sign {
-  margin: 10px 0;
-  height: 100px;
-  padding: 0 0 0 0;
-  font-family: "IBM Plex Mono", monospace;
-  color: #000;
-  font-size: 14px;
-  display: flex;
-  align-items: flex-end; }
-  .sign__link {
-    cursor: pointer; }
-    .sign__link:hover {
-      text-decoration: none;
-      color: #505050; }

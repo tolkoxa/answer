@@ -7,15 +7,8 @@
     box-sizing: border-box;
 }
 
-@mixin transition($transition) {
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
-    transition: $transition;
-}
-
 body {
+    font-size: 16px;
     font-family: $font-main;
     font-family: $font-btn;
     position: relative;
@@ -23,406 +16,136 @@ body {
         content: '18+';
         position: absolute;
         font-family: $font-main;
-        top: 20px;
+        top: 10px;
         right: 20px;
         width: 20px;
         height: 20px;
-        font-size: 16px;
+        font-size: 1.2rem;
         font-weight: 400;
         color: $btn-color_1;
-        opacity: 0.7;
-    }
-}
-
-button {
-    &:hover {
-        cursor: pointer;
-    }
-    position: relative;
-    background: transparent;
-    border: none;
-    outline: none;
-    display: block;
-    height: 120px;
-    width: 350px;
-    padding: 40px;
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin: 0 auto;
-    border-radius: 10px;
-    top: 0;
-    @include transition(.15s ease-in-out);
-    &.btn-main {
-        -webkit-transform: perspective( 500px) rotateX( 35deg);
-        &:before {
-            font-family: $font-btn;
-            display: block;
-            position: absolute;
-            z-index: 1;
-            color: $text-second_color;
-            text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
-            background: $btn-color_1;
-            /* Old browsers */
-            background: -moz-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_1), color-stop(100%, $btn-color_2));
-            /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            /* IE10+ */
-            background: linear-gradient(to bottom, $btn-color_1 0%, $btn-color_2 100%);
-            /* IE6-9 */
-            top: 0;
-            left: 0;
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
-            padding: 40px;
-            box-shadow: inset 0 -2px 5px rgba(255, 255, 255, .3)
-        }
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -20px;
-            left: 4px;
-            height: 30px;
-            width: 342px;
-            background: $btn-color_3;
-            /* Old browsers */
-            background: -moz-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-            /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_3), color-stop(100%, $btn-color_4));
-            /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-            /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-            /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-            /* IE10+ */
-            background: linear-gradient(to bottom, $btn-color_3 0%, $btn-color_4 100%);
-            /* IE6-9 */
-            border-radius: 0 0 10px 10px;
-            -webkit-transform: perspective( 500px) rotateX( -40deg);
-            box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .5), 0 3px 2px -1px rgba(0, 0, 0, 1);
-            @include transition(.15s ease-in-out);
-        }
-        &:hover {
-            top: -6px;
-            &:after {
-                height: 37px;
-                bottom: -26px;
-            }
-        }
-        &:active {
-            top: 0px;
-            &:after {
-                height: 30px;
-                bottom: -20px;
-            }
-        }
-    }
-    &.play {
-        // -webkit-transform: perspective( 500px) rotateX( 35deg);
-        &:before {
-            content: 'Послушать';
-            //     font-family: $font-btn;
-            //     display: block;
-            //     position: absolute;
-            //     z-index: 1;
-            //     color: $text-second_color;
-            //     text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
-            //     background: $btn-color_1;
-            //     /* Old browsers */
-            //     background: -moz-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //     /* FF3.6+ */
-            //     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_1), color-stop(100%, $btn-color_2));
-            //     /* Chrome,Safari4+ */
-            //     background: -webkit-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //     /* Chrome10+,Safari5.1+ */
-            //     background: -o-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //     /* Opera 11.10+ */
-            //     background: -ms-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //     /* IE10+ */
-            //     background: linear-gradient(to bottom, $btn-color_1 0%, $btn-color_2 100%);
-            //     /* IE6-9 */
-            //     top: 0;
-            //     left: 0;
-            //     border-radius: 10px;
-            //     width: 100%;
-            //     height: 100%;
-            //     padding: 40px;
-            //     box-shadow: inset 0 -2px 5px rgba(255, 255, 255, .3)
-        }
-        // &:after {
-        //     // content: '';
-        //     display: block;
-        //     position: absolute;
-        //     bottom: -20px;
-        //     left: 4px;
-        //     height: 30px;
-        //     width: 342px;
-        //     background: $btn-color_3;
-        //     /* Old browsers */
-        //     background: -moz-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* FF3.6+ */
-        //     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_3), color-stop(100%, $btn-color_4));
-        //     /* Chrome,Safari4+ */
-        //     background: -webkit-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* Chrome10+,Safari5.1+ */
-        //     background: -o-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* Opera 11.10+ */
-        //     background: -ms-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* IE10+ */
-        //     background: linear-gradient(to bottom, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* IE6-9 */
-        //     border-radius: 0 0 10px 10px;
-        //     -webkit-transform: perspective( 500px) rotateX( -40deg);
-        //     box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .5), 0 3px 2px -1px rgba(0, 0, 0, 1);
-        //     @include transition(.15s ease-in-out);
-        // }
-        // &:hover {
-        //     top: -6px;
-        //     &:after {
-        //         height: 37px;
-        //         bottom: -26px;
-        //     }
-        // }
-        // &:active {
-        //     top: 0px;
-        //     &:after {
-        //         height: 30px;
-        //         bottom: -20px;
-        //     }
-        // }
-    }
-    &.pause {
-        // -webkit-transform: perspective( 500px) rotateX( 35deg);
-        &:before {
-            content: 'Остановить';
-            //         font-family: $font-btn;
-            //         display: block;
-            //         position: absolute;
-            //         z-index: 1;
-            //         color: $text-second_color;
-            //         text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
-            //         background: $btn-color_1;
-            //         /* Old browsers */
-            //         background: -moz-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //         /* FF3.6+ */
-            //         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_1), color-stop(100%, $btn-color_2));
-            //         /* Chrome,Safari4+ */
-            //         background: -webkit-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //         /* Chrome10+,Safari5.1+ */
-            //         background: -o-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //         /* Opera 11.10+ */
-            //         background: -ms-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            //         /* IE10+ */
-            //         background: linear-gradient(to bottom, $btn-color_1 0%, $btn-color_2 100%);
-            //         /* IE6-9 */
-            //         top: 0;
-            //         left: 0;
-            //         border-radius: 10px;
-            //         width: 100%;
-            //         height: 100%;
-            //         padding: 40px;
-            //         box-shadow: inset 0 -2px 5px rgba(255, 255, 255, .3)
-        }
-        //     &:after {
-        //         content: '';
-        //         display: block;
-        //         position: absolute;
-        //         bottom: -20px;
-        //         left: 4px;
-        //         height: 30px;
-        //         width: 342px;
-        //         background: $btn-color_3;
-        //         /* Old browsers */
-        //         background: -moz-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //         /* FF3.6+ */
-        //         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_3), color-stop(100%, $btn-color_4));
-        //         /* Chrome,Safari4+ */
-        //         background: -webkit-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //         /* Chrome10+,Safari5.1+ */
-        //         background: -o-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //         /* Opera 11.10+ */
-        //         background: -ms-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //         /* IE10+ */
-        //         background: linear-gradient(to bottom, $btn-color_3 0%, $btn-color_4 100%);
-        //         /* IE6-9 */
-        //         border-radius: 0 0 10px 10px;
-        //         -webkit-transform: perspective( 500px) rotateX( -40deg);
-        //         box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .5), 0 3px 2px -1px rgba(0, 0, 0, 1);
-        //         @include transition(.15s ease-in-out);
-        //     }
-        //     &:hover {
-        //         top: -6px;
-        //         &:after {
-        //             height: 37px;
-        //             bottom: -26px;
-        //         }
-        //     }
-        //     &:active {
-        //         top: 0px;
-        //         &:after {
-        //             height: 30px;
-        //             bottom: -20px;
-        //         }
-        //     }
-    }
-    &.again {
-        // -webkit-transform: perspective( 500px) rotateX( 35deg);
-        &:before {
-            content: 'Ещё раз';
-            // font-family: $font-btn;
-            // display: block;
-            // position: absolute;
-            // z-index: 1;
-            // color: $text-second_color;
-            // text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
-            // background: $btn-color_1;
-            // /* Old browsers */
-            // background: -moz-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            // /* FF3.6+ */
-            // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_1), color-stop(100%, $btn-color_2));
-            // /* Chrome,Safari4+ */
-            // background: -webkit-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            // /* Chrome10+,Safari5.1+ */
-            // background: -o-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            // /* Opera 11.10+ */
-            // background: -ms-linear-gradient(top, $btn-color_1 0%, $btn-color_2 100%);
-            // /* IE10+ */
-            // background: linear-gradient(to bottom, $btn-color_1 0%, $btn-color_2 100%);
-            // /* IE6-9 */
-            // top: 0;
-            // left: 0;
-            // border-radius: 10px;
-            // width: 100%;
-            // height: 100%;
-            // padding: 40px;
-            // box-shadow: inset 0 -2px 5px rgba(255, 255, 255, .3)
-        }
-        // &:after {
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     bottom: -20px;
-        //     left: 4px;
-        //     height: 30px;
-        //     width: 342px;
-        //     background: $btn-color_3;
-        //     /* Old browsers */
-        //     background: -moz-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* FF3.6+ */
-        //     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $btn-color_3), color-stop(100%, $btn-color_4));
-        //     /* Chrome,Safari4+ */
-        //     background: -webkit-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* Chrome10+,Safari5.1+ */
-        //     background: -o-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* Opera 11.10+ */
-        //     background: -ms-linear-gradient(top, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* IE10+ */
-        //     background: linear-gradient(to bottom, $btn-color_3 0%, $btn-color_4 100%);
-        //     /* IE6-9 */
-        //     border-radius: 0 0 10px 10px;
-        //     -webkit-transform: perspective( 500px) rotateX( -40deg);
-        //     box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .5), 0 3px 2px -1px rgba(0, 0, 0, 1);
-        //     @include transition(.15s ease-in-out);
-        // }
-        // &:hover {
-        //     top: -6px;
-        //     &:after {
-        //         height: 37px;
-        //         bottom: -26px;
-        //     }
-        // }
-        // &:active {
-        //     top: 0px;
-        //     &:after {
-        //         height: 30px;
-        //         bottom: -20px;
-        //     }
-        // }
     }
 }
 
 .first-page {
     margin: 0 0 0 0;
-    padding: 130px 0 0 0;
+    padding: 50px 0 0 0;
     width: 100%;
     height: 100vh;
-    background-image: url(../img/answer_bg.jpg);
+    background-image: url(../img/answer_bg_mobile.jpg);
     background-size: cover;
     background-position: bottom right;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
-.fp-text__title {
-    margin: 0 0 150px 0;
-    // margin: 50px 0 200px -30px;
-    padding: 0 0 0 0;
-    width: 650px;
+.first-text {
+    margin: 0 auto;
+    width: 90%;
+    background-color: $text-second_color;
+    // border: 1px solid red;
+    padding: 10px;
     font-family: $font-main;
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     color: $text-main_color;
     font-weight: 400;
-    // border: 1px solid blue;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 5px rgba(180, 201, 214, 0.9);
 }
 
-.txt-margin {
-    margin: 0 0 180px 0;
+.fpage-bottom {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 0 25px 0;
 }
 
-.btn-margin {
-    // border: 1px solid red;
-    margin: 0 0 40px 0;
+$bg_hover: lighten(#CC4331, 5%);
+.button {
+    width: 100px;
+    height: 100px;
+    padding: 0 0 0 7px;
+    font-size: 2rem;
+    text-align: center;
+    color: $text-second_color;
+    background-color: #CC4331;
+    border-radius: 50%;
+    text-shadow: 0 -1px -1px darken(#CC4331, 7%);
+    box-shadow: 0 4px 0 darken(#CC4331, 7%), 0 5px 5px 1px $btn-color_2;
+    transition: all .15s ease-in-out;
+    border: 0px;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $bg_hover;
+        text-shadow: 0 -1px -1px darken(#CC4331, 2%);
+        box-shadow: 0 4px 0 darken($bg_hover, 7%), 0 5px 5px 1px #CC4331;
+    }
+    &:active {
+        outline: none;
+        margin-bottom: -4px;
+        box-shadow: none;
+    }
+    &.pause {
+        &:before {
+            content: '\2502\2502';
+            font-weight: 500;
+        }
+    }
+    &.play {
+        &:before {
+            content: '\25B6';
+            font-size: 2.5rem;
+        }
+    }
+    &.again {
+        // -webkit-transform: perspective( 500px) rotateX( 35deg);
+        &:before {
+            content: '\21BB';
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+    }
 }
 
-.cloud {
-    width: 100%;
-    height: 230px;
+._innactive {
+    display: none;
+}
+
+.clouds-main {
+    margin: -40px 0 0 -115px;
 }
 
 .clouds-play {
-    margin: 0 600px 0 0;
-    background-image: url(../img/balloon-orange.png);
+    width: 265px;
+    height: 277px;
+    transform: rotate(-15deg);
+    background-image: url(../img/balloon-orange-mobile.png);
     background-repeat: no-repeat;
     background-position: top right;
-    width: 100%;
-    height: 230px;
     position: relative;
+    background-size: 80%;
     // border: 1px solid orange;
     &::before {
         position: absolute;
         content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
         font-family: $font-main;
         color: $text-second_color;
-        font-size: 30px;
-        line-height: 32px;
+        font-size: 1rem;
+        line-height: 1.25rem;
         font-weight: 500;
         top: 65px;
-        right: 300px;
+        right: 70px;
         width: 100px;
+        transform: rotate(15deg);
     }
 }
 
 .clouds-pause {
-    margin: 0 600px 0 0;
-    padding: 0 0 0 0;
-    background-image: url(../img/balloon-green.png);
+    background-image: url(../img/balloon-green-mobile.png);
     background-repeat: no-repeat;
     background-position: top right;
-    width: 100%;
-    height: 230px;
     position: relative;
     &::before {
         position: absolute;
@@ -439,13 +162,9 @@ button {
 }
 
 .clouds-info {
-    margin: 0 600px 0 0;
-    padding: 0 0 0 0;
-    background-image: url(../img/balloon-blue.png);
+    background-image: url(../img/balloon-blue-mobile.png);
     background-repeat: no-repeat;
     background-position: top right;
-    width: 100%;
-    height: 230px;
     position: relative;
     &::before {
         position: absolute;
@@ -462,13 +181,9 @@ button {
 }
 
 .clouds-site {
-    margin: 0 600px 0 0;
-    padding: 0 0 30px 800px;
-    background-image: url(../img/balloon-red.png);
+    background-image: url(../img/balloon-red-mobile.png);
     background-repeat: no-repeat;
     background-position: top right;
-    width: 100%;
-    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -488,49 +203,173 @@ button {
     }
 }
 
-.container {
-    padding: 80px 0 0 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.author-text {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    width: 650px;
-    height: 400px;
-    font-family: $font-main;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: $text-main_color;
-}
-
-.video {
-    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.6);
-    border-radius: 25px;
-    width: 650px;
-    height: 366px;
-}
-
-.sign {
-    margin: 10px 0;
-    height: 100px;
-    padding: 0 0 0 0;
-    font-family: $font-main;
-    color: $text-main_color;
-    font-size: 14px;
-    display: flex;
-    align-items: flex-end;
-    &__link {
-        cursor: pointer;
-        &:hover {
-            text-decoration: none;
-            color: $btn-color_3;
-        }
-    }
-}
+// .first-page {
+//     margin: 0 0 0 0;
+//     padding: 130px 0 0 0;
+//     width: 100%;
+//     height: 100vh;
+//     background-image: url(../img/answer_bg.jpg);
+//     background-size: cover;
+//     background-position: bottom right;
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: space-between;
+//     align-items: center;
+// }
+// .fp-text__title {
+//     margin: 0 0 150px 0;
+//     // margin: 50px 0 200px -30px;
+//     padding: 0 0 0 0;
+//     width: 650px;
+//     font-family: $font-main;
+//     font-size: 26px;
+//     line-height: 34px;
+//     color: $text-main_color;
+//     font-weight: 400;
+//     // border: 1px solid blue;
+// }
+// .txt-margin {
+//     margin: 0 0 180px 0;
+// }
+// .btn-margin {
+//     // border: 1px solid red;
+//     margin: 0 0 40px 0;
+// }
+// .cloud {
+//     width: 100%;
+//     height: 230px;
+// }
+// .clouds-play {
+//     margin: 0 600px 0 0;
+//     background-image: url(../img/balloon-orange.png);
+//     background-repeat: no-repeat;
+//     background-position: top right;
+//     width: 100%;
+//     height: 230px;
+//     position: relative;
+//     // border: 1px solid orange;
+//     &::before {
+//         position: absolute;
+//         content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
+//         font-family: $font-main;
+//         color: $text-second_color;
+//         font-size: 30px;
+//         line-height: 32px;
+//         font-weight: 500;
+//         top: 65px;
+//         right: 300px;
+//         width: 100px;
+//     }
+// }
+// .clouds-pause {
+//     margin: 0 600px 0 0;
+//     padding: 0 0 0 0;
+//     background-image: url(../img/balloon-green.png);
+//     background-repeat: no-repeat;
+//     background-position: top right;
+//     width: 100%;
+//     height: 230px;
+//     position: relative;
+//     &::before {
+//         position: absolute;
+//         content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
+//         font-family: $font-main;
+//         color: $text-second_color;
+//         font-size: 26px;
+//         line-height: 28px;
+//         font-weight: 500;
+//         top: 65px;
+//         right: 330px;
+//         width: 100px;
+//     }
+// }
+// .clouds-info {
+//     margin: 0 600px 0 0;
+//     padding: 0 0 0 0;
+//     background-image: url(../img/balloon-blue.png);
+//     background-repeat: no-repeat;
+//     background-position: top right;
+//     width: 100%;
+//     height: 230px;
+//     position: relative;
+//     &::before {
+//         position: absolute;
+//         content: '\2014\00A0Листай ниже. Там\00A0подробности.';
+//         font-family: $font-main;
+//         color: $text-second_color;
+//         font-size: 24px;
+//         line-height: 26px;
+//         font-weight: 500;
+//         top: 65px;
+//         right: 170px;
+//         width: 250px;
+//     }
+// }
+// .clouds-site {
+//     margin: 0 600px 0 0;
+//     padding: 0 0 30px 800px;
+//     background-image: url(../img/balloon-red.png);
+//     background-repeat: no-repeat;
+//     background-position: top right;
+//     width: 100%;
+//     height: 230px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     font-family: $font-main;
+//     color: $text-second_color;
+//     font-size: 14px;
+//     font-weight: 400;
+// }
+// .link {
+//     color: $text-second_color;
+//     cursor: pointer;
+//     &:hover {
+//         text-decoration: none;
+//         color: $text-main_color;
+//     }
+// }
+// .container {
+//     padding: 80px 0 0 0;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     align-items: center;
+// }
+// .author-text {
+//     margin: 0 0 0 0;
+//     padding: 0 0 0 0;
+//     width: 650px;
+//     height: 400px;
+//     font-family: $font-main;
+//     font-weight: 400;
+//     font-size: 30px;
+//     line-height: 35px;
+//     color: $text-main_color;
+// }
+// .video {
+//     box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.6);
+//     border-radius: 25px;
+//     width: 650px;
+//     height: 366px;
+// }
+// .sign {
+//     margin: 10px 0;
+//     height: 100px;
+//     padding: 0 0 0 0;
+//     font-family: $font-main;
+//     color: $text-main_color;
+//     font-size: 14px;
+//     display: flex;
+//     align-items: flex-end;
+//     &__link {
+//         cursor: pointer;
+//         &:hover {
+//             text-decoration: none;
+//             color: $btn-color_3;
+//         }
+//     }
+// }
