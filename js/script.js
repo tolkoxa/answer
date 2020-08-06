@@ -22,8 +22,8 @@ window.onload = function() {
 
         if (e.name === 'btn') {
             let btnType = e.dataset.type;
-            fpTop.classList.add('._innactive');
-            clouds.classList.remove('._innactive');
+            fpTop.classList.add('_innactive');
+            clouds.classList.remove('_innactive');
 
             if (btnType === 'play' || btnType === 'again') {
 

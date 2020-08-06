@@ -7,12 +7,38 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Kurale&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Музыкальный ответ на вашу просьбу." />
+    <meta property="og:site_name" content="Музыкальный ответ на просьбу (18+)" />
+    <meta property="og:url" content="http://answer.tolkoxa.ru" />
+    <meta property="og:description" content="Если вы оказались на этой странице, значит вам прислали музыкальный ответ. Чтобы прослушать его — нажмите на кнопку." />
+    <meta property="og:image" content="http://answer.tolkoxa.ru/img/answer_snipp.jpg" />
     <title>Вам музыкальный ответ (18+)</title>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(65586466, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/65586466" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
     <div class="first-page">
-        <div class="cloud clouds-main _innactive" id="clouds"></div>
+        <div class="cloud clouds-main _innactive" id="clouds">
+        </div>
         <div class="fpage-top" id="fp-top">
             <div class="first-text">
                 <div class="fp-text__title">
@@ -25,28 +51,18 @@
             <button class="button play" name="btn" data-type="play"></button>
         </div>
     </div>
-    <!-- <div class="first-page">
-        <div class="cloud" id="clouds"></div>
-        <div class="fp-text__title">
-            <p>Если вы оказались на этой странице, значит вам прислали музыкальный ответ.</p>
-            <p>Чтобы прослушать его &#151; нажмите на кнопку.</p>
-        </div>
-        <div id="btn">
-            <button class="button btn-main play" name="btn" data-type="play"></button>
-        </div>
-    </div>
     <div class="container">
         <div class="author-text txt-margin">
             <p>Эта страница появилась под влиянем песни &laquo;Серёга говорит&raquo; от UMA2URMAN и Василия Уриевского.</p>
             <p>Песня доступна на всех основных платформах.</p>
         </div>
         <div>
-            <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/WRHKvQnZ51s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/WRHKvQnZ51s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="sign">
             Сделал&nbsp;<a class="sign__link" href="http://tolkoxa.ru">tolkoxa.ru</a>
         </div>
-    </div> -->
+    </div>
 
     <script src="js/script.js" defer></script>
 </body>
