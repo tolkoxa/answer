@@ -83,7 +83,7 @@ body {
     padding: 0 17px 0 7px;
     font-weight: 500; }
   .button.play:before {
-    content: '\25B6';
+    content: '\25BA';
     font-size: 2.5rem; }
   .button.again:before {
     content: '\21BB';
