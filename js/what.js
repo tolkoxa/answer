@@ -11,9 +11,9 @@ window.onload = function() {
     let cloudInfo = true;
 
     if (checkMp3 != '') {
-        sound.src = '../data/what.mp3';
+        sound.src = '../data/what/what.mp3';
     } else {
-        sound.src = '../data/what.ogg';
+        sound.src = '../data/what/what.ogg';
     };
 
     let str = '';
