@@ -9,6 +9,8 @@ window.onload = function() {
     let cloudStart = true;
     let fpBgImg = document.getElementById('fpBg');
     let cloudInfo = true;
+    let timerId;
+    let i = 0;
 
     if (checkMp3 != '') {
         sound.src = '../data/when/when.mp3';
@@ -22,58 +24,51 @@ window.onload = function() {
 
         if (e.name === 'btn') {
             let btnType = e.dataset.type;
-            // fpTop.classList.add('_innactive');
-            // clouds.classList.remove('_innactive');
 
             if (btnType === 'play' || btnType === 'again') {
-
-                // setInterval(() => {
-                //     if (((sound.currentTime) >= 35) && (cloudInfo == true)) {
-                //         cloudMore();
-                //         cloudInfo = false;
-                //     }
-                // }, 12000);
-
-
-                // if (cloudStart) { setTimeout(cloudPlay, 2000); }
-                // clouds.classList.remove('clouds-pause');
-
                 btn.innerHTML = '';
                 str = `<button class="button pause" name="btn" data-type="pause"></button>`;
                 btn.insertAdjacentHTML('afterbegin', str);
                 sound.play();
+                fpBgImg.classList.remove('bgimg-3');
+                fpBgImg.classList.add('bgimg-1');
                 cloudStart = false;
-                setTimeout(() => {
+
+                document.getElementById('fp-top').innerHTML = '';
+
+                function one2two() {
                     fpBgImg.classList.remove('bgimg-1');
                     fpBgImg.classList.add('bgimg-2');
-                    console.log(`---1---`);
+                    console.log('1');
+                };
 
-                    setTimeout(() => {
-                        fpBgImg.classList.remove('bgimg-2');
-                        fpBgImg.classList.add('bgimg-1');
-                        console.log(`---2---`);
-                    }, 1000);
-
-                    setTimeout(() => {
-                        fpBgImg.classList.remove('bgimg-1');
-                        fpBgImg.classList.add('bgimg-2');
-                        console.log(`---3---`);
-                    }, 1000);
-
-                }, 3000);
-
-                setTimeout(() => {
+                function two2one() {
                     fpBgImg.classList.remove('bgimg-2');
-                    fpBgImg.classList.add('bgimg-3');
-                    console.log(`---4---`);
-                }, 10000);
+                    fpBgImg.classList.add('bgimg-1');
+                    console.log('2');
+                }
+
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+
+                async function delayedGreeting() {
+                    let i = 0;
+                    do {
+                        one2two();
+                        await sleep(2000);
+                        console.log(i);
+                        two2one();
+                        await sleep(2000);
+                        i++;
+                    }
+                    while (i < 100 && sound.currentTime <= 17);
+                }
+
+                delayedGreeting();
 
             } else if (btnType === 'pause') {
                 cloudStart = false;
-                // if (((sound.currentTime) >= 10) && (cloudStop == true)) {
-                //     cloudPause();
-                //     cloudStop = false;
-                // }
                 btn.innerHTML = '';
                 str = `<button class="button play" name="btn" data-type="play"></button>`;
                 btn.insertAdjacentHTML('afterbegin', str);
@@ -82,33 +77,19 @@ window.onload = function() {
         }
     })
 
-
-
     sound.onended = () => {
-        let finalStr = `<p>Сделал </p>
-        <p><a class="link" href="http://tolkoxa.ru">tolkoxa.ru</a></p>`;
+        fpBgImg.classList.remove('bgimg-1');
+        fpBgImg.classList.remove('bgimg-2');
+        fpBgImg.classList.add('bgimg-3');
+        let finalStr = `
+        <div class="info-margin">
+        <p class="next-page">Смотри ниже.</p>
+        <p class="next-page">Там подробности.</p></div>
+        `;
+        // document.getElementById('fpText').innerHTML = '';
+        document.getElementById('fp-top').insertAdjacentHTML('afterbegin', finalStr);
         btn.innerHTML = '';
         str = `<button class="button btn-main again" name="btn" data-type="again"></button>`;
         btn.insertAdjacentHTML('afterbegin', str);
-        // clouds.classList.add('clouds-site');
-        // clouds.innerHTML = finalStr;
-        fpBgImg.classList.remove('bgimg-3');
-        fpBgImg.classList.add('bgimg-1');
     };
 };
-
-// function cloudPlay() {
-//     clouds.classList.add('clouds-play');
-//     setTimeout(() => { clouds.classList.remove('clouds-play'); }, 5000);
-// }
-
-// function cloudPause() {
-//     clouds.classList.add('clouds-pause');
-//     cloudStop = false;
-// }
-
-// function cloudMore() {
-//     clouds.classList.add('clouds-info');
-//     cloudInfo = false;
-//     setTimeout(() => { clouds.classList.remove('clouds-info'); }, 7000);
-// }

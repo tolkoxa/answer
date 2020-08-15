@@ -37,31 +37,32 @@ body::after {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .bgimg-1 {
     background-image: url(../img/when/rose-1.jpg);
     opacity: 1;
     transition-property: opacity;
-    transition: 1s;
+    transition: 1.4s;
 }
 
 .bgimg-2 {
     background-image: url(../img/when/rose-2.jpg);
     opacity: 1;
     transition-property: opacity;
-    transition: 1s;
+    transition: 1.4s;
 }
 
 .bgimg-3 {
     background-image: url(../img/when/rose-3.jpg);
     opacity: 1;
     transition-property: opacity;
-    transition: 1.8s;
+    transition: 2s;
 }
 
 .first-text {
+    display: block;
     margin: 0 auto;
     width: 90%;
     background-color: #fff;
@@ -132,39 +133,12 @@ body::after {
     font-weight: 600;
 }
 
-._innactive {
-    display: none;
-}
-
-.clouds-main {
-    margin: -35px 0 0 -80px;
-}
-
-.clouds-site {
-    width: 205px;
-    height: 215px;
-    background-image: url(../img/balloon-red-mobile.png);
-    background-repeat: no-repeat;
-    background-position: top right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "IBM Plex Mono", monospace;
+.next-page {
     color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0 0 60px 0;
 }
 
-.link {
-    color: #fff;
-    cursor: pointer;
-}
-
-.link:hover {
-    text-decoration: none;
-    color: #000;
+.info-margin {
+    margin-bottom: 45%;
 }
 
 .container {
@@ -194,7 +168,6 @@ body::after {
     box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     width: 100%;
-    /* height: 450px; */
 }
 
 .sign {
@@ -218,9 +191,6 @@ body::after {
 }
 
 @media only screen and (min-height: 600px) and (max-height: 749px) and (orientation: portrait) {
-    .clouds-main {
-        margin: 35px 0 0 -120px;
-    }
     .author-text {
         font-size: 1.4rem;
         line-height: 1.25;
@@ -228,9 +198,6 @@ body::after {
 }
 
 @media only screen and (min-height: 750px) and (max-height: 799px) and (min-width: 500px) and (max-width: 599px) and (orientation: portrait) {
-    .clouds-main {
-        margin: 75px 0 0 -65px;
-    }
     .author-text {
         font-size: 1.4rem;
         line-height: 1.25;
@@ -247,7 +214,7 @@ body::after {
         padding: 50px 0 0 0;
         width: 100%;
         height: 100vh;
-        background-image: url(../img/answer_bg.jpg);
+        background-image: url(../img/when/);
         background-size: cover;
         background-position: bottom right;
         display: flex;
@@ -267,118 +234,12 @@ body::after {
         font-size: 1.6rem;
         line-height: 1.25;
     }
-    .clouds-main {
-        margin: 110px 300px 0 0;
-    }
-    .clouds-play {
-        width: 500px;
-        height: 208px;
-        background-image: url(../img/balloon-orange-mobile.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-    }
-    .clouds-play::before {
-        position: absolute;
-        content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 65px;
-        right: 70px;
-        width: 100px;
-    }
 }
 
 @media only screen and (max-width: 700px) and (orientation: landscape) {
     .first-text {
         margin: 0 auto;
         width: 50%;
-    }
-    .clouds-main {
-        margin: -5% 0 0 -150px;
-    }
-    .clouds-play {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-orange.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-play::before {
-        position: absolute;
-        content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 65px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-pause {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-green.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-pause::before {
-        position: absolute;
-        content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 55px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-info {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-blue.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-info::before {
-        position: absolute;
-        content: '\2014\00A0Листай ниже. Там\00A0подробности.';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 64px;
-        right: 200px;
-        width: 135px;
-    }
-    .clouds-site {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-red.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 0 0 20px 0;
     }
 }
 
@@ -387,89 +248,6 @@ body::after {
         margin: 0 auto;
         width: 50%;
         font-size: 1.3rem;
-    }
-    .clouds-main {
-        margin: 0 0 0 -150px;
-    }
-    .clouds-play {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-orange.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-play::before {
-        position: absolute;
-        content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 65px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-pause {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-green.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-pause::before {
-        position: absolute;
-        content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 55px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-info {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-blue.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-info::before {
-        position: absolute;
-        content: '\2014\00A0Листай ниже. Там\00A0подробности.';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 64px;
-        right: 200px;
-        width: 135px;
-    }
-    .clouds-site {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-red.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-size: 85%;
-        align-items: center;
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 0 0 60px 0;
     }
 }
 
@@ -487,89 +265,6 @@ body::after {
         font-size: 1.6rem;
         line-height: 1.25;
     }
-    .clouds-main {
-        margin: 150px 0 0 0px;
-    }
-    .clouds-play {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-orange.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-play::before {
-        position: absolute;
-        content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 65px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-pause {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-green.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-pause::before {
-        position: absolute;
-        content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 55px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-info {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-blue.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-info::before {
-        position: absolute;
-        content: '\2014\00A0Листай ниже. Там\00A0подробности.';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 64px;
-        right: 200px;
-        width: 135px;
-    }
-    .clouds-site {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-red.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 0 0 60px 0;
-    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1365px) and (orientation: landscape) {
@@ -585,89 +280,6 @@ body::after {
     .author-text {
         font-size: 1.6rem;
         line-height: 1.25;
-    }
-    .clouds-main {
-        margin: 200px 0 0 100px;
-    }
-    .clouds-play {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-orange.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-play::before {
-        position: absolute;
-        content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1.4rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 65px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-pause {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-green.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-pause::before {
-        position: absolute;
-        content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 55px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-info {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-blue.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-info::before {
-        position: absolute;
-        content: '\2014\00A0Листай ниже. Там\00A0подробности.';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 64px;
-        right: 200px;
-        width: 135px;
-    }
-    .clouds-site {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-red.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        display: flex;
-        background-size: 85%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 0 0 60px 0;
     }
 }
 
@@ -685,88 +297,5 @@ body::after {
         width: 600px;
         font-size: 1.6rem;
         line-height: 1.25;
-    }
-    .clouds-main {
-        margin: 80px 0 0 200px;
-    }
-    .clouds-play {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-orange.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        position: relative;
-        background-size: 85%;
-    }
-    .clouds-play::before {
-        position: absolute;
-        content: '\2014\00A0Слышно? \00A0\00A0Не\00A0громко?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1.4rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 65px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-pause {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-green.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-pause::before {
-        position: absolute;
-        content: '\2014\00A0А\00A0что, \00A0\00A0не\00A0понравилось?';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1.4rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 55px;
-        right: 250px;
-        width: 100px;
-    }
-    .clouds-info {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-blue.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 85%;
-        position: relative;
-    }
-    .clouds-info::before {
-        position: absolute;
-        content: '\2014\00A0Листай ниже. Там\00A0подробности.';
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1.2rem;
-        line-height: 1.25;
-        font-weight: 500;
-        top: 64px;
-        right: 150px;
-        width: 200px;
-    }
-    .clouds-site {
-        width: 500px;
-        height: 250px;
-        background-image: url(../img/balloon-red.png);
-        background-repeat: no-repeat;
-        background-size: 85%;
-        background-position: top right;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "IBM Plex Mono", monospace;
-        color: #fff;
-        font-size: 1.3rem;
-        font-weight: 400;
-        padding: 0 0 60px 0;
     }
 }
