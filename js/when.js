@@ -83,8 +83,8 @@ window.onload = function() {
         fpBgImg.classList.add('bgimg-3');
         let finalStr = `
         <div class="info-margin">
-        <p class="next-page">Смотри ниже.</p>
-        <p class="next-page">Там подробности.</p></div>
+        <p>Смотри ниже.</p>
+        <p>Там подробности.</p></div>
         `;
         // document.getElementById('fpText').innerHTML = '';
         document.getElementById('fp-top').insertAdjacentHTML('afterbegin', finalStr);
